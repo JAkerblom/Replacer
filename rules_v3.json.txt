@@ -1,0 +1,34 @@
+[
+	{
+		"RuleType": "replace",
+		"Rules":
+		[
+			{
+				"Id": 1,
+				"OldChunk": "Företaget",
+				"NewChunk": "Forefront"
+			},
+			{
+				"Id": 2,
+				"OldChunk": "offshore",
+				"NewChunk": "Frontshore"
+			},
+			{
+				"Id": 3,
+				"OldChunk": "vanligt",
+				"NewChunk": "ovanligt"
+			}
+		]
+	},
+	{
+		"RuleType": "append",
+		"Rules":
+		[
+			{
+				"Id": 1,
+				"AppendChunk": " jävla",
+				"BaseChunk": "samma"
+			}
+		]
+	}
+]

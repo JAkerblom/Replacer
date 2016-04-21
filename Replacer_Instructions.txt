@@ -1,0 +1,23 @@
+Ta fram en applikation som byter ut på förhand givna ord i meningar. Ta dig an uppgiften såsom du skulle lösa den om du satt hos en kund.
+
+--------------------------------------------------------
+Det är vanligt att den största delen av IT-budgeten går åt till underhåll, och inte till efterlängtade nyinvesteringar. 
+Men om applikationerna utvecklades på rätt sätt skulle det kunna vara annorlunda. 
+Att bygga för framtiden handlar därför om att se såväl helheten i hur applikationerna samverkar, som detaljerna i det enskilda systemet och hur dessa stödjer verksamhetens behov.
+ 
+Företaget erbjuder systemutvecklingskompetens inom de plattformar som tillhandahålls av Microsoft, EPiServer, Oracle och SAP. 
+Med vår kompetens inom Digital Transformation och UX skapar vi bra och användarvänliga system som kan anpassas efter förändrade behov. 
+När projektet lämpar sig för offshoreutveckling kan vi, genom vårt koncept offshore, erbjuda kostnadseffektiva lösningar där delar av insatsen förläggs till China under ledning av erfarna projektledare på våra kontor i Sverige. 
+Alldeles oavsett om utvecklingen sköts här eller där, arbetar vi med samma höga kvalitetskrav och samma närhet till kunden.
+--------------------------------------------------------
+
+Orden som ska bytas ut är följande:
+ 
+"Företaget" ska bytas mot "Forefront"
+"applikationerna" ska bytas ut mot "systemen"
+"annorlunda" ska bytas ut mot "tvärtom"
+"bra" ska bytas ut mot "flexibla"
+"offshore" ska bytas ut mot "Frontshore"
+"China" ska bytas ut mot "Kina"
+
+Man ska även försöka bygga applikationen så att det är lätt att lägga till nya regler...
