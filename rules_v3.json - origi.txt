@@ -1,6 +1,6 @@
 [
 	{
-		"RuleType":"replace",
+		"RuleType": "append",
 		"Rules":
 		[
 			{
@@ -8,7 +8,7 @@
 				"OldChunk":"Företaget",
 				"NewChunk":"Forefront"
 			},
-			{	
+			{
 				"Id":2,
 				"OldChunk":"offshore",
 				"NewChunk":"Frontshore"
@@ -17,7 +17,7 @@
 				"Id":3,
 				"OldChunk":"vanligt",
 				"NewChunk":"ovanligt"
-			},
+				},
 			{
 				"Id":0,
 				"OldChunk":"IT",
@@ -26,7 +26,7 @@
 		]
 	},
 	{
-		"RuleType":"append",
+		"RuleType": "append",
 		"Rules":
 		[
 			{

@@ -19,8 +19,13 @@ namespace Replacer.Rules
     //public override void Manipulate(ref string textContents)
     public override string Manipulate(string textContents)
     {
-      Console.WriteLine("Texten manipuleras enligt: Slå ihop \"" + BaseChunk + "\" med \"" + AppendChunk + "\".");
+      Console.WriteLine(" -> Texten manipuleras enligt: Slå ihop \"" + BaseChunk + "\" med \"" + AppendChunk + "\".");
       return textContents.Replace(BaseChunk, BaseChunk + AppendChunk);
+    }
+
+    public override string ToString()
+    {
+      return "\"" + BaseChunk + "\" och \"" + AppendChunk + "\"";
     }
   }
 }

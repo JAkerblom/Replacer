@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Replacer;
-using System.IO;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using Replacer.Read;
+using Replacer.Data;
 using Replacer.Rules;
 
 namespace Replacer.Runner
@@ -16,23 +9,23 @@ namespace Replacer.Runner
   {
     static void Main(string[] args)
     {
-      string ruleLocation = @"C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Replacer\rules_v3.json.txt";
+      string ruleLocation = @"C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Replacer\rules_v3.json";
       string textLocation = @"C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Replacer\text.txt";
 
-      var rulesReader = new RulesReader(ruleLocation);
-      var textsReader = new TextsReader(textLocation);
+      var rulesIO = new RulesIO(ruleLocation);
+      var textReader = new TextsReader(textLocation);
       var textManipulator = new TextManipulator();
-      var displayer = new Displayer();
-      //var ruleWriter = new RuleWriter();
+      var console = new ConsoleInteractor();
 
-      var ruleFixtures = rulesReader.ReadFromRulesRepository();
-      var textContents = textsReader.ReadFromTextRepository();
+      var ruleFixtures = rulesIO.GetRuleFixtures();
+      var approvedRuleTypes = rulesIO.GetApprovedRules();
+      var textContents = textReader.ReadFromTextRepository();
 
       bool userWantsToExit = false;
       string subAction;
       while (!userWantsToExit)
       {
-        displayer.DisplayStartMenu();
+        console.DisplayStartMenu();
         var action = Console.ReadLine();
         switch (action)
         {
@@ -40,44 +33,57 @@ namespace Replacer.Runner
             userWantsToExit = true;
             break;
           case "1":
+            console.DisplayManipulationStart();
             var manipulatedContents = textManipulator.Manipulate(textContents, ruleFixtures);
-            displayer.DisplayResultsFromTextManipulator(manipulatedContents);
+            console.DisplayResultsFromTextManipulator(manipulatedContents);
             subAction = Console.ReadLine();
             if (subAction == "0") userWantsToExit = true;
             break;
           case "2":
-            displayer.DisplayRequestForRuleType();
+            console.DisplayRequestForRuleType();
             var ruleType = Console.ReadLine();
-            Rule newRule = displayer.RequestNewRule(ruleType);
-            ruleFixtures.Find(x => x.RuleType == ruleType).Rules.Add(newRule);
-            //ruleWriter.Save(ruleFixtures);
+            if (approvedRuleTypes.ToList().Where(x => x == ruleType).FirstOrDefault() == null ) {
+              Console.WriteLine(" [!!!] Du matade in en regel som inte finns implementerad för närvarande.");
+              break;
+            }
+            Rule newRule = rulesIO.RequestNewRule(ruleType, ruleFixtures);
+            ruleFixtures = rulesIO.SaveRule(newRule, ruleFixtures, approvedRuleTypes);
+            console.DisplayNewlyAddedRule(newRule);
+            subAction = Console.ReadLine();
+            if (subAction == "0") userWantsToExit = true;
             break;
         }
       }
 
-      Console.WriteLine("\n\nAbryter applikationen...");
+      Console.WriteLine("\n Abryter applikationen...");
       Console.ReadLine();
     }
   }
 }
-      //_ruleset = new Dictionary<string, IRule<ReplaceRule>>()
-      //_ruleset = new Dictionary<string, ReplaceRule>()
-      //{
-      //  {
-      //    "req-1.1",
-      //    //new ReplaceRule("Företaget", "Forefront")
-      //    new ReplaceRule()
-      //    {
-      //      OldChunk = "Företaget",
-      //      NewChunk = "Forefront"
-      //    }
-      //  },
-      //  {
-      //    "req-1.2",
-      //    new ReplaceRule()
-      //    {
-      //      OldChunk = "",
-      //      NewChunk = ""
-      //    }
-      //  }
-      //};
+
+
+
+//var ruleFixtures = rulesIO.ReadFromRulesRepository();
+//var approvedRules = rulesIO.ReadFromRulesRepository().Find(x => x.ApprovedRules);
+
+//_ruleset = new Dictionary<string, IRule<ReplaceRule>>()
+//_ruleset = new Dictionary<string, ReplaceRule>()
+//{
+//  {
+//    "req-1.1",
+//    //new ReplaceRule("Företaget", "Forefront")
+//    new ReplaceRule()
+//    {
+//      OldChunk = "Företaget",
+//      NewChunk = "Forefront"
+//    }
+//  },
+//  {
+//    "req-1.2",
+//    new ReplaceRule()
+//    {
+//      OldChunk = "",
+//      NewChunk = ""
+//    }
+//  }
+//};

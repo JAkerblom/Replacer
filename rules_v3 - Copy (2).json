@@ -1,0 +1,47 @@
+{
+	"ApprovedRuleTypes":
+	[
+		"replace",
+		"append"
+	],
+	"RuleFixtures":
+	[
+		{
+			"RuleType":"replace",
+			"Rules":
+			[
+				{
+					"Id":1,
+					"OldChunk":"Företaget",
+					"NewChunk":"Forefront"
+				},
+				{	
+					"Id":2,
+					"OldChunk":"offshore",
+					"NewChunk":"Frontshore"
+				},
+				{
+					"Id":3,
+					"OldChunk":"vanligt",
+					"NewChunk":"ovanligt"
+				},
+				{
+					"Id":4,
+					"OldChunk":"IT",
+					"NewChunk":"skit"
+				}
+			]
+		},
+		{
+			"RuleType":"append",
+			"Rules":
+			[
+				{
+					"Id":1,
+					"BaseChunk":"samma",
+					"AppendChunk":" jävla"
+				}
+			]
+		}
+	]
+}

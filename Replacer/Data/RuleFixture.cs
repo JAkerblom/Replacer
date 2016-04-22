@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Replacer.Rules;
 
-namespace Replacer.Read
+namespace Replacer.Data
 {
-  [JsonConverter(typeof(RuleConverter))]
+  //[JsonConverter(typeof(RuleConverter))]
   public class RuleFixture
   {
     /// <summary>
@@ -16,11 +16,5 @@ namespace Replacer.Read
     /// </summary>
     public string RuleType { get; set; }
     public List<Rule> Rules { get; set; }
-
-    /// <summary>
-    ///  Implementation v.1: With the IRule interface
-    /// </summary>
-    //[JsonConverter(typeof(RuleConverter))]
-    //public IRule rule { get; set; }
   }
 }

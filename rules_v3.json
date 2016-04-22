@@ -1,0 +1,66 @@
+{
+  "ApprovedRuleTypes": [
+    "replace",
+    "append",
+    "prepend"
+  ],
+  "RuleFixtures": [
+    {
+      "RuleType": "replace",
+      "Rules": [
+        {
+          "Id": 1,
+          "OldChunk": "Företaget",
+          "NewChunk": "Forefront",
+          "RuleType": null
+        },
+        {
+          "Id": 2,
+          "OldChunk": "offshore",
+          "NewChunk": "Frontshore",
+          "RuleType": null
+        },
+        {
+          "Id": 3,
+          "OldChunk": "vanligt",
+          "NewChunk": "ovanligt",
+          "RuleType": null
+        },
+        {
+          "Id": 4,
+          "OldChunk": "IT",
+          "NewChunk": "skit",
+          "RuleType": null
+        }
+      ]
+    },
+    {
+      "RuleType": "append",
+      "Rules": [
+        {
+          "Id": 1,
+          "BaseChunk": "samma",
+          "AppendChunk": " jävla",
+          "RuleType": null
+        },
+        {
+          "Id": 2,
+          "BaseChunk": "SAP",
+          "AppendChunk": "PA",
+          "RuleType": "append"
+        }
+      ]
+    },
+    {
+      "RuleType": "prepend",
+      "Rules": [
+        {
+          "Id": 0,
+          "BaseChunk": "bra",
+          "PrependChunk": "stört ",
+          "RuleType": "prepend"
+        }
+      ]
+    }
+  ]
+}

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Replacer.Read
+namespace Replacer.Data
 {
   public class TextsReader
   {

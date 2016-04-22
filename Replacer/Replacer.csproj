@@ -48,24 +48,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\RuleData.cs" />
     <Compile Include="Manipulate\TextManipulator.cs" />
-    <Compile Include="Read\RulesReader.cs" />
-    <Compile Include="Read\TextsReader.cs" />
+    <Compile Include="Data\RulesIO.cs" />
+    <Compile Include="Data\TextsReader.cs" />
     <Compile Include="Rules\AppendRule.cs" />
+    <Compile Include="Rules\PrependRule.cs" />
     <Compile Include="Rules\_Rule.cs" />
     <Compile Include="_old\Replacer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\ReplaceRule.cs" />
     <Compile Include="Rules\_IRule.cs" />
-    <Compile Include="Read\RuleConverter.cs" />
-    <Compile Include="Read\RuleFixture.cs" />
+    <Compile Include="Data\RuleConverter.cs" />
+    <Compile Include="Data\RuleFixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Write\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

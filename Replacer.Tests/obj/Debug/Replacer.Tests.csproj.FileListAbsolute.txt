@@ -1,0 +1,11 @@
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Replacer\Replacer.Tests\bin\Debug\Replacer.Tests.dll
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Replacer\Replacer.Tests\bin\Debug\Replacer.Tests.pdb
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Replacer\Replacer.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Replacer\Replacer.Tests\bin\Debug\nunit.framework.dll
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Replacer\Replacer.Tests\bin\Debug\Replacer.dll
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Replacer\Replacer.Tests\bin\Debug\Replacer.pdb
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Replacer\Replacer.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Replacer\Replacer.Tests\bin\Debug\nunit.framework.xml
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Replacer\Replacer.Tests\obj\Debug\Replacer.Tests.csprojResolveAssemblyReference.cache
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Replacer\Replacer.Tests\obj\Debug\Replacer.Tests.dll
+C:\Users\JAkerblom\Documents\Visual Studio 2015\Projects\My_CIK_code\Replacer\Replacer.Tests\obj\Debug\Replacer.Tests.pdb
